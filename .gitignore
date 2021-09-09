@@ -1,7 +1,13 @@
+# IDE
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+.venv
+env
+*.sqlite3
 
 # C extensions
 *.so
