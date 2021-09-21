@@ -67,6 +67,6 @@ jobs:
       - name: Flake8
         run: docker exec django-tdd python -m flake8 .
       - name: Black
-        run: docker exec django-tdd python -m black . --check
+        run: docker exec django-tdd python -m black --exclude=migrations . --check
       - name: isort
-        run: docker exec django-tdd python -m isor . --check-only
+        run: docker exec django-tdd python -m isort . --check-only
