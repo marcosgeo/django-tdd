@@ -97,7 +97,7 @@ def test_remove_movie(client, add_movie):
 
 @pytest.mark.django_db
 def test_remove_movie_incorrect_id(client):
-    resp = client.delete(f"/api/movies/99/")
+    resp = client.delete("/api/movies/99/")
     assert resp.status_code == 404
 
 
@@ -122,7 +122,7 @@ def test_update_movie(client, add_movie):
 
 @pytest.mark.django_db
 def test_update_movie_incorrect_id(client):
-    resp = client.put(f"/api/movies/99/")
+    resp = client.put("/api/movies/99/")
     assert resp.status_code == 404
 
 
